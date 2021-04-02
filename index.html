@@ -6,15 +6,38 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <div class="btn-start-wrapper">
+    <button class="btn" type="button" name="button" onclick="draw(); this.style.display='none';">START</button>
+    </div>
+
     <div class="wrapper">
     <canvas id="myCanvas" width="680" height="520"></canvas>
     </div>
+
+    <div class="container">
+        <div class="callout">
+          <div class="callout-header">Завдання </div>
+            <span class="closebtn1" onclick="this.parentElement.style.display='none';">×</span>
+              <div class="callout-container">
+                  <p>
+                    Гральний автомат відклали на склад через те, що відвідувачам торгового центру не подобалась
+                    "стара" гра. Проте у свій час вона була досить популярною. Чи вистачить вам терпіння пройти цей рівень?
+                    Пам'ятайте, що наші пенсіонери застали розвиток сучасних розваг і можуть подилитись досвідом.
+                    Впевнений, щось вводить їх у приємні спогади, подаруймо їм їх.
+
+                  </p>
+            </div>
+        </div>
+      </div>
 
     <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   <strong>Controls!</strong> <p>Керуйте платформою стрілками або мишкою.
 </p>
 </div>
+
+<
+
     <script src="./script.js"></script>
   </body>
 </html>

@@ -10,13 +10,13 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
-var brickRowCount = 5;
+var brickRowCount = 7;
 var brickColumnCount = 3;
 var brickWidth = 75;
 var brickHeight = 20;
-var brickPadding = 20;
+var brickPadding = 10;
 var brickOffsetTop = 30;
-var brickOffsetLeft = 100;
+var brickOffsetLeft = 50;
 var score = 0;
 var lives = 2;
 
@@ -66,8 +66,8 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if(score == brickRowCount*brickColumnCount) {
-            alert("YOU WIN, CONGRATS! Your score is: "+ score);
-            document.location.reload();
+            alert("YOU WIN! Your score is: "+ score + " To the next level!");
+          document.location.href="https://danylogera.github.io/game-3/";
           }
         }
       }
@@ -141,7 +141,7 @@ setInterval(1000, draw, 1000);
       lives--;
       if(!lives) {
         alert("GAME OVER! Your score is: "+ score);
-        document.location.reload();
+document.location.reload();
       }
       else {
         x = canvas.width/2;
@@ -160,9 +160,8 @@ setInterval(1000, draw, 1000);
     paddleX -= 7;
   }
 
+
   x += dx;
   y += dy;
   requestAnimationFrame(draw);
 }
-
-draw();
